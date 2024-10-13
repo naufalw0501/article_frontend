@@ -1,0 +1,88 @@
+.modalmobile {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5F5;
+    text-align: left;
+    overflow: auto;
+    z-index: 20;
+    position: fixed;
+    cursor: default;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.5s;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 769px) {
+        padding: 1.5vw 4vw;
+        max-height: 90%;
+        max-width: 90%;
+        min-width: 50%;
+        min-height: 50%;
+        border-radius: 1vw;
+        margin: 1vh auto;
+    }
+
+    @media (max-width: 768px) and (min-width: 641px) {
+        padding: 1.5vw 4vw;
+        max-height: 90%;
+        max-width: 90%;
+        min-width: 50%;
+        min-height: 50%;
+        border-radius: 1vw;
+        margin: 1vh auto;
+    }
+
+    @media (max-width: 640px) {
+        padding: 1.5vw 4vw;
+        border-radius: 10px;
+        min-width: 80%;
+        min-height: 50%;
+        max-height: 90%;
+        max-width: 85%;
+    }
+}
+
+.modalmobile#hide {
+    transform: translate(-50%, 50%);
+    z-index: -100;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, 50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.modalmobile .closeButton {
+    position: absolute;
+    right: .5vw;
+    top: .5vw;
+    transition: 0.5s;
+    color: #E11D48;
+    @media (min-width: 769px) {
+        font-size:35px;
+    }
+
+    @media (max-width: 768px) and (min-width: 641px) {
+        font-size: 21px;
+    }
+
+    @media (max-width: 640px) {
+        font-size: 18px;
+    }
+}
+
+.modalmobile .closeButton:hover {
+    cursor: pointer;
+    color: pink
+}

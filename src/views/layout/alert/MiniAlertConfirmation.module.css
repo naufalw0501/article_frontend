@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+    top: 2%;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: 0.5s;
+    z-index: 200;
+  
+    @media (min-width: 769px) {
+      padding: 1vw 1vw;
+      max-height: 16%;
+      max-width: 30%;
+      min-width: 20%;
+      min-height: 5%;
+      border-radius: 1vw;
+      transform: translate(0%, 0%);
+      right: 2%;
+    }
+  
+    @media (max-width: 768px) and (min-width: 641px) {
+      padding: 1.5vw 4vw;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      max-height: 8%;
+      min-height: 5%;
+      max-width: 85%;
+      min-width: 80%;
+      border-radius: 1vw;
+      margin: 1vh auto;
+    }
+  
+    @media (max-width: 640px) {
+      padding: 1.5vw 4vw;
+      border-radius: 10px;
+      min-height: 8%;
+      max-height: 10%;
+      max-width: 85%;
+      min-width: 80%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+  }
+  
+  .container#hide {
+    transform: translate(0%, 50%);
+    z-index: -100;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .container .icon {
+    flex: 10%;
+    color: var(--green-param);
+    font-size: 30px;
+  }
+  
+  .container .containerText {
+    flex: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  
+    @media (min-width: 769px) {
+      text-align: center;
+      justify-content: start;
+      align-items: center;
+    }
+  
+    @media (max-width: 768px) and (min-width: 641px) {
+      text-align: center;
+      justify-content: start;
+      align-items: center;
+    }
+    @media (max-width: 640px) {
+      text-align: center;
+      justify-content: start;
+      align-items: center;
+    }
+  }
+  
+  .container .containerText .title {
+    font-size: 14px;
+    color: var(--green-param);
+    font-weight: 700;
+  }
+  
+  .container .containerText .description {
+    font-size: 12px;
+    font-weight: 500;
+    color: silver;
+  }
+  
+  .container .close {
+    flex: 10%;
+    color: silver;
+    font-size: 30px;
+    transition: 0.5s;
+  }
+  
+  .container .close:hover {
+    color: rgb(134, 134, 134);
+    cursor: pointer;
+  }
